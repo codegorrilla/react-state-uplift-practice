@@ -1,0 +1,43 @@
+html,
+body {
+	background-color: #333;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 2rem;
+	box-sizing: border-box;
+	font-family: inherit;
+	font-size: 1rem;
+	text-align: left;
+	line-height: normal;
+	font-weight: normal;
+	color: #fff;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+}
+
+h1 {
+	font-size: 1.5rem;
+}
+
+input,
+button {
+	margin-right: 0.2rem;
+	padding: 0.5rem;
+}
+
+.disabled {
+	cursor: not-allowed;
+	background-color: #ddd;
+}
+
+.normal {
+	cursor: pointer;
+	background-color: #fff;
+}
