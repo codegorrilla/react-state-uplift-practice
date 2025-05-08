@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import Form2 from './components/Form2';
 
 export default function App() {
 	const [inputVal, setInputVal] = useState('');
@@ -8,9 +9,7 @@ export default function App() {
 
 	const handleInputVal = (e) => {
 		e.preventDefault();
-
 		const inputValue = inputRef.current.value;
-
 		setInputVal(inputValue);
 
 		if (inputValue.trim() !== '') {
@@ -24,21 +23,24 @@ export default function App() {
 	};
 
 	return (
-		<form
-			className='container'
-			onSubmit={handleInputVal}
-		>
-			<input
-				type='text'
-				ref={inputRef}
-			/>
-			<button
-				type='submit'
-				className={!isValid ? 'disabled' : 'normal'}
+		<>
+			<form
+				className='container'
+				onSubmit={handleInputVal}
 			>
-				Print value
-			</button>
-			<p>{inputVal}</p>
-		</form>
+				<input
+					type='text'
+					ref={inputRef}
+				/>
+				<button
+					type='submit'
+					className={!isValid ? 'disabled' : 'normal'}
+				>
+					Print value
+				</button>
+				<p>{inputVal}</p>
+			</form>
+			<Form2 />
+		</>
 	);
 }
